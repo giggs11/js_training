@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<base id="site_url" href="https://www.cloudwebcode.com/?l=en&amp;p=home" >
+	<meta name="author" content="Sergiu Gordienco Vasile">
+	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=auto, minimum-scale=0.6, maximum-scale=2.0">
+	<meta name="language" content="en" />
+	<meta name="copyright" content="cloudwebcode.com">
+	<meta name="robots" content="index, follow" >
+	<meta name="description" content="CloudWebCode is online Template Editor also it is a free online code editor with syntax highlighting and multiple temmplated for multip">
+	<meta name="keywords" content="cloudwebcode, online editor, code editor, templates, javascript, html, css, web editor, templates editor">
+	<title>CloudWebCode - Online HTML/JS/CSS template editor</title>
+	<meta name="title" content="CloudWebCode - Online HTML/JS/CSS template editor">
+	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" >
+	<link rel="icon" type="image/x-icon" href="/favicon.ico" >
+	<link href="https://www.cloudwebcode.com/addons/RegalRoyal/styles/less/style.less.cache.css" rel="stylesheet" type="text/css" />
+
+	<link rel="stylesheet" type="text/css" href="https://www.cloudwebcode.com/slDOM_tricks/buttons.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="https://www.cloudwebcode.com/obiecte/o_user/lib_blog/themes/RegalRoyal/style/default.css" media="screen" />
+
+	<script type="text/javascript" src="https://www.cloudwebcode.com/script.js"></script>
+	<script type="text/javascript" src="https://www.cloudwebcode.com/slDOM_tricks/api.js"></script>
+	<script type="text/javascript" src="https://www.cloudwebcode.com/obiecte/o_user/lib_blog/themes/RegalRoyal/script/script.js"></script>
+
+<style type="text/css">
+#WALH_T_MENU {
+	clear	: both;
+}
+
+#WALH_T_MENU [attr-font-icon] {
+	color	: white;
+	background	: royalblue;
+}
+
+#WALH_T_MENU [attr-font-icon]:hover {
+	background	: inherit;
+	color		: royalblue;	
+}
+
+#WALH_T_MENU [attr-font-icon]::before {
+	content: attr(attr-font-icon);
+	font-family: websymbols;
+	padding	: 0 5px;
+}
+
+article.item-photos {
+	display		: inline-block;
+	position	: relative;
+	text-align	: center;
+	width		: 240px;
+	margin		: 28px;
+}
+
+article.item-photos img {
+	height		: 120px;
+	width		: auto;
+
+	position	: absolute;
+	
+	border	: 5px solid #fff;
+	box-shadow	: 0 0 4px rgba(0,0,0,0.4);
+	-webkit-box-shadow	: 0 0 4px #000;
+	
+	transform: rotate(9deg) scale(0.8) translate(-2px, 15px);
+	-ms-transform: rotate(9deg) scale(0.8) translate(-2px, 15px);
+	-moz-transform: rotate(9deg) scale(0.8) translate(-2px, 15px);
+	-webkit-transform: rotate(9deg) scale(0.8) translate(-2px, 15px);
+	
+	transform-origin	: center center;
+	-ms-transform-origin	: center center;
+	-moz-transform-origin	: center center;
+	-webkit-transform-origin	: center center;
+	
+	transition	: 0.5s;
+	-ms-transition	: 0.5s;
+	-moz-transition	: 0.5s;
+	-webkit-transition	: 0.5s;
+	
+	z-index	: 50;
+}
+
+a:hover article.item-photos img {
+	transform-origin: 42px -57px;
+	-ms-transform-origin: 42px -57px;
+	-moz-transform-origin: 42px -57px;
+	-webkit-transform-origin: 42px -57px;
+}
+
+a article.item-photos {
+	color	: #000;
+}
+
+article.item-photos img:first-child {
+	z-index	: 0;
+	
+	transform: rotate(-18deg) scale(1.2) translate(0px, 5px);
+	-ms-transform: rotate(-18deg) scale(1.2) translate(0px, 5px);
+	-moz-transform: rotate(-18deg) scale(1.2) translate(0px, 5px);
+	-webkit-transform: rotate(-18deg) scale(1.2) translate(0px, 5px);
+}
+
+article.item-photos img:last-child,
+article.item-photos img:nth-child(3) {
+	position	: static !important;
+	z-index		: 1;
+	
+	transform: rotate(15deg) translate(-63px, 8px);
+	-ms-transform: rotate(15deg) translate(-63px, 8px);
+	-moz-transform: rotate(15deg) translate(-63px, 8px);
+	-webkit-transform: rotate(15deg) translate(-63px, 8px);
+}
+
+article.item-photos h1 {
+	font-family	: main-font; position: relative; z-index: 100; font-size: 23px; font-weight: bold; text-shadow: 1px 0 0.5px; letter-spacing: 1px;text-align: center;
+}
+
+
+.item-options h2 {
+	font-family	: main-font;
+	line-height	: 1.25;
+	font-size	: 15px;
+	font-weight	: normal;
+}
+
+.item-options h2:before {
+	content	: '\0000f5';
+	font-size	: 15px;
+	font-weight	: bold;
+	color		: #9c8;
+	font-family	: websymbols;
+	padding		: 0 11px 0 5px;
+}
+</style>	<script type="text/javascript">
+		var user_geo = {ip:'127.0.0.1',flag:'xx',country:false,city:false,region:false,town:false,left:false,long:false,post:false}
+		var e;
+		try{
+			user_geo = {
+				ip	: '127.0.0.1',
+				flag	: geoip_country_code(),
+				country	: geoip_country_name(),
+				city	: geoip_city(),
+				region	: geoip_region(),
+				town	: geoip_region_name(),
+				left	: geoip_latitude(),
+				long	: geoip_longitude(),
+				post	: geoip_postal_code()
+			}
+		}catch(e){}
+	</script>
+</head>
+<body onload="setTimeout(function_doc_ready,100);" class="regal-royal"><input type="hidden" id="SITE_dURL" value="https://www.cloudwebcode.com/"><input type="hidden" id="SITE_BASE" value="www.cloudwebcode.com/"><input type="hidden" id="SITE_DOMAIN" value="cloudwebcode.com"><input type="hidden" id="SITE_IMG" value="https://img.cloudwebcode.com/"><div id="DOC_BODY"></div><form name="f_index" action="/" method="post" target="_self" charset="UTF-8"></form><div id="DOC_HEAD" style="overflow:hidden;height:1px;height:0;position:relative;"></div><div id="DOC_HEAD0"></div><div id="DOC_HEADER"></div><script src="https://www.cloudwebcode.com/parts/obj/bgs_mbk_m4m_mbn_bgd_arhv.js?t=1" type="text/javascript"></script><div id="WALL">
+<center>
+	<div id="WAL0">
+		<header id="WALH">
+			<section id="WALH_T">
+				<div id="WALH_T_BG"></div>
+				<div id="WALH_T_LOGO">
+					<strong>CloudWebCode - Online HTML/JS/CSS template editor</strong>
+					<small>Sergiu Gordienco Vasile</small>
+				</div>
+				<nav id="WALH_T_MENU" class="rr-menu ">
+					<ul>
+				<li class="rr-menu--active"><a href="https://www.cloudwebcode.com/?l=en&amp;p=home" title="CloudWebCode - Splash Page">CloudWebCode</a></li><li><a href="https://www.cloudwebcode.com/?l=en&amp;p=code-example" title=" ">Code Picks</a></li><li><a href="https://www.cloudwebcode.com/?l=en&amp;p=templates" title=" ">Templates</a></li><li><a href="https://www.cloudwebcode.com/?l=en&amp;p=video-lessons" title=" ">Video Lessons</a></li><li><a href="https://www.cloudwebcode.com/?l=en&amp;p=about-me" title=" ">About</a></li>		</ul>
+				</nav>
+			</section>
+			<div id="WALH_G"><div id="WALH_G_SH"></div></div>
+		</header>
+		<section id="WALB">
+			<div id="WALB_B">
+				<div id="WALB_BAR">&nbsp;</div>
+			</div>
+			<div class="head-bg">
+<div class="animated bounceIn head-bg-part-1">
+<h1 class="animated animated-2s tada" style="color: #efefef; font-size: 52px;line-height: 1.5;">CloudWebCode.com</h1>
+<h2 style="color: #dfdfdf;font-size: 18px; line-height: 1.25;">Free Online Webcode Editor ( alpha version )</h2>
+<a href="https://www.cloudwebcode.com//app/webcode" class="button blue" title="Run CloudWebCode Editor" style="margin: 15px 0;padding: 12px 16px;font-weight: bold; font-size: 16px; font-family: main-font;">Try &amp; Use Online WebCode Editor</a>
+</div>
+<div class="animated bounceIn head-bg-part-2">
+<h1 class="animated animated-2s tada" style="color: #101010; font-size: 24px; margin-top: 77px; line-height: 1.5;">HTML5 Markdown Browser</h1>
+<h2 style="color: #232323;font-size: 16px; margin-top: 25px; line-height: 1.25;">Free Online Markdown Browser ( alpha version )</h2>
+<a href="?p=markdown-browser&amp;l=en" class="button blue" title="Run Markdown Browser" style="margin: 9px 0 15px 0;padding: 12px 16px;font-weight: bold; font-size: 16px; font-family: main-font;">Try &amp; HTML5 Markdown Browser .md</a>
+</div>
+</div>
+<style type="text/css">
+.head-bg {
+height	: 270px;
+position: relative;
+}
+@media (max-width: 800px) {
+.head-bg {
+width	: 160%;
+transform	: scale(0.625);
+transform-origin : top left;
+height	: 169px;
+}
+}
+.head-bg > div.head-bg-part-1 {
+position: absolute;
+top		: 0;
+left	: 0;
+z-index	: 3;
+width	: 60%;
+height	: 230px;
+overflow: 0;
+border	: 0 solid #fff;
+border-width	: 0 10px 1px 0;
+-webkit-border-radius	: 0 45px 100% 0;
+-moz-border-radius	: 0 45px 100% 0;
+-ms-border-radius	: 0 45px 100% 0;
+-o-border-radius	: 0 45px 100% 0;
+border-radius	: 0 45px 100% 0;
+-webkit-box-shadow	: 1px 0 2px rgba(0, 0, 0, 0.5);
+-moz-box-shadow	: 1px 0 2px rgba(0, 0, 0, 0.5);
+-ms-box-shadow	: 1px 0 2px rgba(0, 0, 0, 0.5);
+-o-box-shadow	: 1px 0 2px rgba(0, 0, 0, 0.5);
+box-shadow	: 1px 0 2px rgba(0, 0, 0, 0.5);
+overflow: hidden;
+background	: #000;
+text-align	: left;
+text-shadow	: 0 0 23px #000;
+padding-left: 5%;
+}
+.head-bg > div.head-bg-part-1::after {
+content		: ' ';
+display		: 'block';
+position	: absolute;
+z-index		: -1;
+top			: 0;
+left		: 0;
+width		: 100%;
+height		: 100%;
+background	: #232323 url("https://www.cloudwebcode.com/tmp_users/0/9/blog/cloudwebcode--com/tmp-files/uploaded_files/files/home-page.share/webcode-screenshot.jpg") -90px -23px no-repeat;
+-webkit-opacity		: 0.23;
+-moz-opacity		: 0.23;
+-ms-opacity		: 0.23;
+-o-opacity		: 0.23;
+opacity		: 0.23;
+}
+.head-bg > div.head-bg-part-2 {
+position: absolute;
+top		: 0;
+right	: 0;
+z-index	: 2;
+width	: 60%;
+height	: 230px;
+overflow: 0;
+border	: 0 solid #232323;
+border-width	: 0 0 1px 10px;
+overflow: hidden;
+background	: #fff;
+color	: #000;
+text-align	: right;
+text-shadow	: 0 0 23px #fff;
+padding-right	: 2%;
+padding-left	: 20%;
+}
+.head-bg > div.head-bg-part-2::after {
+content		: ' ';
+display		: 'block';
+position	: absolute;
+z-index		: -1;
+top			: 0;
+left		: 0;
+width		: 100%;
+height		: 100%;
+background	: #fff url("https://www.cloudwebcode.com/tmp_users/0/9/blog/cloudwebcode--com/tmp-files/uploaded_files/files/home-page.share/webcode-screenshot.jpg") right -23px no-repeat;
+-webkit-opacity		: 0.09;
+-moz-opacity		: 0.09;
+-ms-opacity		: 0.09;
+-o-opacity		: 0.09;
+opacity		: 0.09;
+}
+</style>
+<hr class="animated animated-w1s slideInLeft animated-0_5s" />
+<div class="animated animated-w1s bounceIn white video-chat-button-space" style="padding: 10px 0; position: relative; text-align: center;">
+<span rr-icon="">r</span>
+<span rr-icon="" style="right: 5%; left: initial;">&#xF1;</span>
+<span rr-icon="" style="left: 45%; top : 23%;">l</span>
+<span rr-icon="" style="left: 27%; top : 30%;">z</span>
+<a href="http://meeting.cloudwebcode.com" class="rr-button-info" style="display: inline-block; margin: 27px auto; font-family: main-font; font-size: 230%; font-weight: bold; position: relative; z-index: 12;">
+Free Live Video Chat Rooms
+</a>
+<img src="https://img.cloudwebcode.com/icons/file/oxygen/128/devices/audio_headset.png" />
+<img src="https://img.cloudwebcode.com/icons/file/oxygen/128/devices/camera_web.png" style="right: 5%;left: initial;" />
+</div>
+<style type="text/css">
+.video-chat-button-space > img,
+.video-chat-button-space > span[rr-icon] {
+font-size: 120px;
+position:absolute;
+top : 50%;
+left: 5%;
+transform: translateY(-50%);
+-moz-transform: translateY(-50%);
+-webkit-transform: translateY(-50%);
+-ms-transform: translateY(-50%);
+z-index	: 11;
+}
+.video-chat-button-space > span[rr-icon] {
+color: #acceff;
+z-index	: 10;
+}
+</style>
+<hr class="animated animated-w1s slideInLeft animated-0_5s" />
+	<script type="text/javascript">
+		/*
+			background-image: url("http://img.cloudwebcode.com/icons/loading/3d-circle-ok.png"), radial-gradient(circle at center center , royalblue, transparent 0%, transparent 55%, royalblue 57%, royalblue 65%, transparent 67%);
+			background-position: center 89px, center 59px;
+			background-repeat: no-repeat;
+			background-size: auto auto, 89px 89px;
+		*/
+		function webcodeListingImageController(node) {
+			// get node size
+			var p		= _();
+			var size	= p.E(node).f({ transition: '', height: 'auto', width: 'auto' }).r();
+			p.F({ height: '', width: '', transition: '1s linear' });
+			if (size.h === 1 && size.w === 1) {
+				// init counter
+				var initial_level	= 0;
+				var animate_time	= 100;
+				// 65,105,225 - royalblue
+				// 255,127,80 - coral
+				var color			= '65,105,225'; 
+				var runStep = function () {
+					if (initial_level >= 100) {
+						if (node.src)
+						node.src	= node.src.split('?')[0]+'?t='+new Date().valueOf();
+					} else {
+						initial_level++;
+						p.E(node).f({
+							"backgroundImage"	: "url(\""+SITE_IMG()+"icons/loading/3d-circle-ok.png\"), radial-gradient(circle at center center , rgba("+color+", 0.45) "+Math.floor( 53 * initial_level/100)+"%, transparent "+Math.floor( 55 * initial_level/100)+"%, transparent 56%, rgba("+color+",0.89) 57%, rgba("+color+",0.89) 65%, transparent 67%)",
+							"backgroundPosition": "center 89px, center 59px",
+							"backgroundRepeat"	: "no-repeat",
+							"backgroundSize"	: "auto auto, 89px 89px"
+						});
+						setTimeout(runStep, animate_time);
+					}
+				};
+				runStep();
+			}
+		}
+		function webcodeListingLikeController(node) {
+			var code;
+			var p =	_(false, node);
+			code	= p._('-attr-code-click');
+			p.F({ display: "none" }).P(3).e('div','~').V({ innerHTML: code });
+		}
+	</script>
+	<section class="html5-thumbs">
+		<h1 title="">Coud WebCode Examples - HTML CSS JavaScript in Online WebCode Editor </h1>
+		<article data-label="3 ratings">
+				<div class="photo-container">
+					<a href="?/parts/gadget/m_markdown/markdown-docs/m_markdown/m_markdown_css=&amp;p=code-example&amp;item=cd%2Fdemo--m-markdown&amp;user=localhost%3A0ade7c2cf97f75d009975f4d720d1fa6c19f4897"><img src="https://www.cloudwebcode.com/app/pasteview/api/dXNlclZhcl9jZC9kZW1vLS1tLW1hcmtkb3du_bG9jYWxob3N0OjBhZGU3YzJjZjk3Zjc1ZDAwOTk3NWY0ZDcyMGQxZmE2YzE5ZjQ4OTc=_thumb/~" onload="webcodeListingImageController(this);" /></a>
+				</div>
+				<div class="text-container">
+					<h1>markdown Example \u00BB browser for MD</h1>
+					<p>
+					<span rr-icon="" class="rr-button" style="float: right;" attr-code-click="&lt;iframe style=&quot;width: 90%; height: 36px; border-radius: 4.5px; position: absolute; bottom: 72px; right: 5%;&quot; src=&quot;/app/lib/profile/static-data/widgets/rating/?user=localhost%3A0ade7c2cf97f75d009975f4d720d1fa6c19f4897&amp;amp;item=cd%2Fdemo--m-markdown&quot; scrolling=&quot;no&quot;&gt;&lt;/iframe&gt;" onclick="webcodeListingLikeController(this)">S</span>
+					An example of implementation for markdown browser</p>
+				</div>
+			</article>
+			<article data-label="2 ratings">
+				<div class="photo-container">
+					<a href="?/parts/gadget/m_markdown/markdown-docs/m_markdown/m_markdown_css=&amp;p=code-example&amp;item=cd%2Fdemo--codeex-zachstronaut-ibvfr&amp;user=localhost%3Ada4b9237bacccdf19c0760cab7aec4a8359010b0"><img src="https://www.cloudwebcode.com/app/pasteview/api/dXNlclZhcl9jZC9kZW1vLS1jb2RlZXgtemFjaHN0cm9uYXV0LWlidmZy_bG9jYWxob3N0OmRhNGI5MjM3YmFjY2NkZjE5YzA3NjBjYWI3YWVjNGE4MzU5MDEwYjA=_thumb/~" onload="webcodeListingImageController(this);" /></a>
+				</div>
+				<div class="text-container">
+					<h1>3d vector cube</h1>
+					<p>
+					<span rr-icon="" class="rr-button" style="float: right;" attr-code-click="&lt;iframe style=&quot;width: 90%; height: 36px; border-radius: 4.5px; position: absolute; bottom: 72px; right: 5%;&quot; src=&quot;/app/lib/profile/static-data/widgets/rating/?user=localhost%3Ada4b9237bacccdf19c0760cab7aec4a8359010b0&amp;amp;item=cd%2Fdemo--codeex-zachstronaut-ibvfr&quot; scrolling=&quot;no&quot;&gt;&lt;/iframe&gt;" onclick="webcodeListingLikeController(this)">S</span>
+					\n[tag:3d] [tag:cube] [tag:vector] [tag:pixel]</p>
+				</div>
+			</article>
+			<article data-label="2 ratings">
+				<div class="photo-container">
+					<a href="?/parts/gadget/m_markdown/markdown-docs/m_markdown/m_markdown_css=&amp;p=code-example&amp;item=cd%2Fdemo--js-charts&amp;user=localhost%3A0ade7c2cf97f75d009975f4d720d1fa6c19f4897"><img src="https://www.cloudwebcode.com/app/pasteview/api/dXNlclZhcl9jZC9kZW1vLS1qcy1jaGFydHM=_bG9jYWxob3N0OjBhZGU3YzJjZjk3Zjc1ZDAwOTk3NWY0ZDcyMGQxZmE2YzE5ZjQ4OTc=_thumb/~" onload="webcodeListingImageController(this);" /></a>
+				</div>
+				<div class="text-container">
+					<h1>JS CHARTS Example</h1>
+					<p>
+					<span rr-icon="" class="rr-button" style="float: right;" attr-code-click="&lt;iframe style=&quot;width: 90%; height: 36px; border-radius: 4.5px; position: absolute; bottom: 72px; right: 5%;&quot; src=&quot;/app/lib/profile/static-data/widgets/rating/?user=localhost%3A0ade7c2cf97f75d009975f4d720d1fa6c19f4897&amp;amp;item=cd%2Fdemo--js-charts&quot; scrolling=&quot;no&quot;&gt;&lt;/iframe&gt;" onclick="webcodeListingLikeController(this)">S</span>
+					A simple html project structure, you can clone it easily, after login, an modify an save..</p>
+				</div>
+			</article>
+		</section>
+	<hr class="animated animated-w1s slideInLeft animated-0_5s" />
+<table cellpadding="0" cellspacing="10" style="width:100%;">
+<tr valign="top">
+<td valign="middle" align="center" width="450">
+<a href="https://www.cloudwebcode.com//app/webcode" style="display:block; height: 222px; overflow: hidden;" class="butt_4 animated bounceInLeft" >
+<img src="https://www.cloudwebcode.com/tmp_users/0/9/blog/cloudwebcode--com/tmp-files/uploaded_files/files/home-page.share/webcode-screenshot.jpg" style="width: 100%;height: auto;" class="animated animated-5s animated-infinite bounce" />
+</a>
+</td>
+<td align="left" class="item-options">
+<h2 class="animated animated-w2s bounceInRight">Free online web project editor with <b>realtime view</b></h2>
+<h2 class="animated animated-w2s bounceInRight"><b>Code Highlight</b> edit, with a lot of snippets</h2>
+<h2 class="animated animated-w2s bounceInRight">Editor has ability to edit <b>HEX Files</b>. Edit files in HEX &amp; HEX mixed mode</h2>
+<h2 class="animated animated-w2s bounceInRight">Programing course builder, slide show presentations</h2>
+<h2 class="animated animated-w2s bounceInRight">Additional functionalities as ( Encryption: TEA, AES128, AES256 etc., )</h2>
+<h2 class="animated animated-w2s bounceInRight">Including free plugins: <b>GIT Snippets</b> ( Clone, Pull, Push, Reset, Checkout)</h2>
+<h2 class="animated animated-w2s bounceInRight">Switch Edit Mode (HEX, Hex-Mixed [right col], Text, Binnary)</h2>
+<h2 class="animated animated-w2s bounceInRight"><b>Export Project in ZIP</b>, <b>Import Project from ZIP</b>, Library import</h2>
+<h2 class="animated animated-w2s bounceInRight">Video Lessons - <a href="?p=video-lessons&amp;l=en">click to view lessons</a></h2>
+<a href="https://www.cloudwebcode.com//app/webcode" class="button blue animated animated-w2s bounceInDown" title="link-to: Free WebCode Editor" style="margin-top: 40px; font-family: main-font; padding: 10px 20px; font-weight: bold;">Try Editor now</a>
+</td>
+</table>
+<hr class="animated animated-w1s slideInRight animated-0_5s" />
+<table cellpadding="0" cellspacing="10" style="width:100%;">
+<tr valign="top">
+<td valign="middle" align="center" width="240">
+<a href="?p=templates&amp;l=en">
+<article class="item-photos animated bounceIn animated-w1s">
+<img src="https://www.cloudwebcode.com/tmp_users/0/9/blog/cloudwebcode--com/tmp-files/uploaded_files/files/home-page.share/template01.jpg" />
+<img src="https://www.cloudwebcode.com/tmp_users/0/9/blog/cloudwebcode--com/tmp-files/uploaded_files/files/home-page.share/template02.gif" />
+<img src="https://www.cloudwebcode.com/tmp_users/0/9/blog/cloudwebcode--com/tmp-files/uploaded_files/files/home-page.share/template03.gif" />
+<h1 class="animated bounceIn animated-w2s" style="color: #4787ed;">Free CSS Templates</h1>
+</article>
+</a>
+</td>
+<td align="left" class="item-options">
+<h2 class="animated animated-w2s bounceInRight">Free CSS Templates in one place</h2>
+<h2 class="animated animated-w2s bounceInRight">Each Template has info about License and Author Info</h2>
+<h2 class="animated animated-w2s bounceInRight">All design are avaible for <b>downloading in ZIP format</b></h2>
+<h2 class="animated animated-w2s bounceInRight">You can <b>preview</b> CSS Templates</h2>
+<h2 class="animated animated-w2s bounceInRight">You can <b>Edit CSS Templates</b> in Online WebEditor every as you want</h2>
+<a href="?p=templates&amp;l=en" class="button blue animated animated-w2s bounceInDown" title="Free CSS Templates" style="margin-top: 40px; font-family: main-font; padding: 10px 20px; font-weight: bold;">Browse CSS Templates</a>
+</td>
+</table>
+<hr class="animated animated-w1s slideInLeft animated-0_5s" />
+<div style="margin: 10px 0;text-align: center;">
+<h2>Other Cool Resources</h2>
+<div class="home-backlinks">
+<a href="http://codemirror.net/">
+CodeMirror
+</a>
+<a href="http://stuk.github.io/jszip/">
+JSZip
+</a>
+</div>
+</div>
+<style type="text/css">
+.home-backlinks a {
+display		: inline-block;
+font-size	: 16px;
+line-height	: 1.5;
+padding		: 3px 10px;
+margin		: 9px 1px;
+}
+</style>		</section>
+		<footer id="WALF"><!-- <div style="height: 1px;position: fixed; bottom: 0;left: 0;width:100%;text-align: center;">
+	<div style="position: relative; width: 240px; height: 1px; margin: 0 auto;">
+		<a lang="https://www.okpay.com/process.html?ok_receiver=OK116540760&amp;ok_item_1_name=Donation+for+WebDevelopment&amp;ok_currency=EUR&amp;ok_item_1_type=donation&amp;ok_fees=1" target="_blank" style="position: absolute; bottom: 1px; left: 0;" class="inline_block" href="https://www.okpay.com/process.html?ok_receiver=OK116540760&amp;ok_item_1_name=Donation+for+WebDevelopment&amp;ok_currency=EUR&amp;ok_item_1_type=donation&amp;ok_item_1_price=5&amp;ok_fees=1"><img src="https://www.okpay.com/img/buttons/en/donate/d14o186x54en.png"></a>
+	</div>
+</div> --></footer>
+	</div>
+</center>
+</div></body>
+
+
+
+
+<script type="text/javascript">(function() {
+	_().I('WALH_T_MENU').Q('ul').e('li','~').e('a','~').V({
+		href : "#"
+	}).v({
+		"attr-font-icon"	: ".",
+		"attr-icon-logined"	: "A",
+		"attr-icon-unlogined"	: ".",
+		"attr-link-logined"	: "/app/profile/",
+		"attr-link-unlogined"	: "/obiecte/login/?login-view",
+		"attr-text-logined"	: " Your Profile",
+		"attr-text-unlogined"	: " Sign In",
+		"gtpl"	: "profile-button-gadget"
+	});
+	// initing profile ajax requests
+	m_login.profile(true);
+	m_login.profileCallbackUpdate["top-menu-update"]	= function( profile ) {
+		var p		= _();
+		// update HTML NODES
+		p.$("[gtpl=\"profile-button-gadget\"]",true,function( node, pnode, i, vars, tmp, p, list ) {
+			p.E(node);
+			if( profile && profile.user ) {
+				p.v({
+					"attr-font-icon"	: p._('-attr-icon-logined')
+				});
+				p.V({href: p._('-attr-link-logined'), target: "_self" });
+				p.d().t(p._('-attr-text-logined'));
+			} else {
+				p.v({
+					"attr-font-icon"	: p._('-attr-icon-unlogined')
+				});
+				p.V({href: p._('-attr-link-unlogined'), target: "_blank" });
+				p.d().t(p._('-attr-text-unlogined'));
+			}
+		});
+	};
+})();</script><script type="text/javascript">	function_doc_onload();	</script></html>
